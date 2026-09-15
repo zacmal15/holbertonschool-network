@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# Configures localhost and facebook.com IP address resolution
-sed -i 's/127.0.0.1[[:space:]]*localhost/127.0.0.2 localhost/' /etc/hosts
-echo "8.8.8.8 facebook.com" >> /etc/hosts
+# Configures localhost and facebook.com to resolve to specified IP addresses
+sed 's/127\.0\.0\.1[[:space:]]*localhost/127.0.0.2 localhost/' /etc/hosts > /tmp/hosts
+echo "8.8.8.8 facebook.com" >> /tmp/hosts
+cat /tmp/hosts > /etc/hosts
+rm /tmp/hosts
