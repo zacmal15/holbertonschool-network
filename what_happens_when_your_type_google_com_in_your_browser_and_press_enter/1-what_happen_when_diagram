@@ -1,0 +1,52 @@
+                    USER / BROWSER
+                          │
+                          │ https://www.google.com
+                          ▼
+                    ┌───────────┐
+                    │    DNS    │
+                    │Resolution │
+                    └─────┬─────┘
+                          │
+                          │ Returns server IP
+                          ▼
+                    ┌───────────┐
+                    │ FIREWALL  │
+                    └─────┬─────┘
+                          │
+                          │ HTTPS / TLS
+                          │ Encrypted
+                          │ Port 443
+                          ▼
+                  ┌─────────────────┐
+                  │  LOAD BALANCER  │
+                  └────────┬────────┘
+                           │
+                           │ Distributes request
+                           ▼
+                  ┌─────────────────┐
+                  │   WEB SERVER    │
+                  │ Serves web page │
+                  └────────┬────────┘
+                           │
+                           ▼
+                  ┌─────────────────┐
+                  │  APPLICATION    │
+                  │     SERVER      │
+                  │ Generates page  │
+                  └────────┬────────┘
+                           │
+                           │ Requests data
+                           ▼
+                  ┌─────────────────┐
+                  │    DATABASE     │
+                  └────────┬────────┘
+                           │
+                           │ Data returned
+                           ▼
+                  APPLICATION SERVER
+                           │
+                           ▼
+                     WEB SERVER
+                           │
+                           ▼
+                        BROWSER
